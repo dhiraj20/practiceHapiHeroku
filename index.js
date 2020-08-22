@@ -21,13 +21,13 @@ const init = async () => {
     });
 
     await server.start();
-    mongoose.connect(process.env.MongoDB_URL || MongoDB_URL, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (error) => {
-        if (!error) {
-            console.log('mongodb default connection open to mongodb://27017', process.env.PORT, process.env.MongoDB_URL);
-        } else {
-            console.log('mongoose default connection error' + JSON.stringify(error, undefined, 2));
-        }
-    });
+    // mongoose.connect(process.env.MongoDB_URL || MongoDB_URL, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }, (error) => {
+    //     if (!error) {
+    //         console.log('mongodb default connection open to mongodb://27017', process.env.PORT, process.env.MongoDB_URL);
+    //     } else {
+    //         console.log('mongoose default connection error' + JSON.stringify(error, undefined, 2));
+    //     }
+    // });
     console.log('Server running on %s', server.info.uri);
 };
 
